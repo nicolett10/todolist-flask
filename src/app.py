@@ -1,6 +1,9 @@
 from flask import Flask, jsonify, request, json
 app = Flask(__name__)
 
+app.config['DEBUG'] = True
+app.config['ENV'] = 'development'
+
 todos = [
     { "label": "My first task", "done": False },
     { "label": "My second task", "done": False }
